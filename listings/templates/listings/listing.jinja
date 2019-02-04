@@ -1,0 +1,60 @@
+<div class="card">
+    {% for photo in listing.photos %}
+        {% if photo.is_main %}
+            <img class="card-img-top" src="media/{{ photo.url }}" height="200" width="250"/>
+            <div class="price-badge text-left">
+                <h3 class="badge text-white bg-success">{{ listing.price|format_currency }}</h3>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <span class="pt-3">
+        <h6 class="card-title"><strong>{{ listing.street }}
+        {% if listing.unit_number %}
+            #{{ listing.unit_number }}
+        {% endif %}
+        </strong></h6>
+        <i class="listing-detail fas fa-map-marker"></i>
+        {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}
+    </span>
+    <div class="card-body">
+        <div class="d-flex justify-content-between">
+            <span class="listing-detail">
+                <i class="fas fa-square"></i>
+                <small>Sqft: {{ listing.sqft | to_int }}</small>
+            </span>
+            <span class="listing-detail">
+                <i class="fas fa-car"></i>
+                <small>Garage: {{ listing.garage | to_int }}</small> 
+            </span>
+        </div>
+        <div class="pt-2 d-flex justify-content-between">
+            <span class="listing-detail">
+                <i class="fas fa-bed"></i>
+                <small>Bedrooms: {{ listing.bedrooms | to_int }}</small>
+            </span>
+            <span class="listing-detail">
+                <i class="fas fa-bath"></i>
+                <small>Bathrooms: {{ listing.bathrooms | to_int }}</small> 
+            </span>
+        </div>
+    <hr />
+    <div class="card-body p-0">
+        <span class="listing-detail text-left">
+            <i class="fas fa-user"></i>
+            <small>{{ listing.realtor.name }}</small>
+        </span><br />
+        <span class="listing-detail text-left">
+            <i class="fas fa-clock"></i>
+            <small>{{ listing.list_date | time_diff }}</small>
+        </span>
+    </div>
+    <hr />
+    <div class="card-body p-0">
+    <a href="/{{ listing.pk }}/details/">
+        <button class="btn text-white details-link w-100">
+            More Info
+        </button>
+    </a>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.listing-detail-header {
+    background-image: url('../imgs/skyscraper.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: white;
+}
+
+.additional-photo {
+    cursor: pointer;
+}
+
+#map-widget {
+    min-height: 40vh;
+}

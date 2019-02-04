@@ -1,0 +1,28 @@
+<div id="search" class="search d-flex align-items-center flex-column justify-content-center">
+    <div class="container">
+        <div id="search-box" class="p-4 text-center w-00">
+            <h1 class="mt-2">Property Searching Just Got Easier</h1>
+            <div class="text-wrap">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices laoreet enim varius consectetur. 
+                Curabitur a nisi a urna mollis rhoncus.
+            </div>
+            <form class="mt-2 form-inline" id="search-form" method="GET" action="/search">
+                <div class="mb-3 input-group w-100">
+                    <input class="form-control mr-2" name="title" placeholder="Keywords"/>
+                    <input class="form-control mr-2" name="city" placeholder="City"/>
+                    <select class="custom-select" name="state">
+                        <option selected>State (All)</option>
+                        {% for state in states %}
+                            <option>{{ state }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-4 input-group w-100">
+                    <input class="form-control mr-2" type="number" min="0" max="10" placeholder="Bedrooms (All)" />
+                    <input class="form-control" type="number" min="0" placeholder="Max Price (Any)" />
+                </div>
+                <button class="w-100 btn btn-info p-1" type="submit">Submit Form</button>
+            </form>
+        </div>
+    </div>
+</div>

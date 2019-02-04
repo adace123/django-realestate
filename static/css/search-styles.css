@@ -1,0 +1,11 @@
+#search {
+    min-height: 65vh;
+    background: url('../imgs/house-main.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#search-box {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,24 @@
+footer {
+    color: white;
+}
+
+#footer-main {
+    background-image: url('../imgs/skyscraper.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+#footer-secondary {
+    background-color: #01579b;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: green;
+    opacity: 0.6;
+}

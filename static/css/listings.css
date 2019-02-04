@@ -1,0 +1,21 @@
+.listing-thumbnail {
+    position: relative;
+}
+
+.price-badge {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+
+.badge {
+    font-size: 14px;
+}
+
+.listing-detail, .listing-specs {
+    color: #00c853;
+}
+
+.details-link {
+    background-color: #01579b;
+}

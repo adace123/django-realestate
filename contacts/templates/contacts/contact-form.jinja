@@ -1,0 +1,28 @@
+<form id="contact-form" method="post" data-listing="{{ listing.pk }}" action="/contact">
+    <div class="form-group">
+        <label for="property">Property</label>
+        <input name="property" class="form-control" id="property" disabled value="{{ listing.street }}">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input name="name" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" class="form-control" type="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" class="form-control" id="message"></textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success w-100">
+            Send
+        </button>
+    </div>
+    <div id="alert-dialog" class="text-white text-center form-group">
+        <div id="alert-text" class="alert" role="alert">
+            A simple primary alert—check it out!
+        </div>
+    </div>
+</form>
